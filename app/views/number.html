@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="/why-juggling">Back</a>
+
+      <h1 class="heading-large">How many balls would you like to be able to juggle with?
+      </h1>
+
+      <form class="form" action="/check-your-answers" method="post">
+
+        <div class="form-group">
+      <select class="form-control" id="select-box" name="number">
+        <option>One hundred</option>
+        <option selected='true'>A million</option>
+        <option>A trillion</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <input class="button" type="submit" value="Continue">
+    </div>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
